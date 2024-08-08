@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vewod</title>
+    <link rel="stylesheet" href="static/intro.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="static/pn.png" alt="logo">
+        </div>    
+    </header>    
+    <main>
+        <h1>Welcome</h1>
+        <div class="buttons">
+            <a href="/signup">
+                <button class="animated-button">Sign Up</button>
+            </a>
+            <a href="/login">
+                <button class="animated-button">Login</button>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Vewod. All rights reserved.</p>
+    </footer>
+    <script src="static/scripts.js"></script>
+</body>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.animated-button');
+    buttons.forEach(button => {
+        button.addEventListener('mouseover', function() {
+            button.classList.add('hovered');
+        });
+        button.addEventListener('mouseout', function() {
+            button.classList.remove('hovered');
+        });
+    });
+});
+
+</script>
+</html>

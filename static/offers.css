@@ -4,16 +4,19 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: wheat;
-    color: white;
+    background: url("background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+
 }
 
 header {
-    background-color: rgb(95, 71, 39);
-    color: hsl(0, 0%, 100%);
+    background: url("background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    color: whitesmoke;
     padding: 20px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
 }
 
 header .container {
@@ -91,11 +94,13 @@ main {
 }
 
 footer {
-    background-color: rgb(95, 71, 39);
+    background: url("background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
     color: hsl(0, 0%, 100%);
     padding: 20px;
     text-align: center;
-    border-top: 1px solid #ddd;
+    
 }
 
 footer .container {

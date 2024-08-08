@@ -2,12 +2,14 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background: url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
   color: #333;
 }
 
 header {
-  background: linear-gradient(#c850c0, #4158d0);
+  background: #343a40;
   color: #f5f5f5;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -17,12 +19,19 @@ header {
 header .container {
   max-width: 1200px;
   margin: 0 auto;
+  
+}
+
+header .logo {
+  width: 10%; /* Adjusted the logo width */
+  display: block;
+  margin: 0 auto 10px;
 }
 
 header h1 {
   margin: 0;
   font-size: 2em;
-  color: #333;
+  color: #f5f5f5;
 }
 
 .filters {

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Reviews</title>
+    <link rel="stylesheet" href="static/view.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Restaurant Reviews</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="review-feed" id="reviewFeed">
+            <!-- Review cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Vewod. All rights reserved.</p>
+            <a href="/home" class="button">Home</a>
+            <a href="/launch" class="button">New Launches</a>
+            <a href="/blog" class="button">Blogs</a>
+            <a href="/blogs" class="button">offers</a>
+            <a href="/about" class="button">About</a>
+        </div>
+    </footer>
+    <script>
+        async function loadReviews() {
+            try {
+                const response = await fetch('/api/reviews');
+                const reviews = await response.json();
+                const reviewFeed = document.getElementById('reviewFeed');
+
+                reviews.forEach(review => {
+                    const reviewCard = document.createElement('div');
+                    reviewCard.className = 'review-card';
+                    reviewCard.innerHTML = `
+                        <h2>${review.hotelName}</h2>
+                        <p><strong>${review.userName}</strong></p>
+                        <p><strong>Review:</strong>${review.review}</p>
+                        <p><strong>Recommended Dishes:</strong> ${review.recommendedDishes}</p>
+                        <p><strong>Suitable For:</strong> ${review.suitability}</p>
+                        <p><strong>Safety Rating:</strong> ${review.safetyRating}/5</p>
+                        <p><strong>Food Rating:</strong> ${review.foodRating}/5</p>
+                        <p><strong>Overall Rating:</strong> ${review.overallRating}/5</p>
+                    `;
+                    reviewFeed.appendChild(reviewCard);
+                });
+            } catch (error) {
+                console.error('Error loading reviews:', error);
+            }
+        }
+
+        // Call function to load reviews
+        loadReviews();
+    </script>
+</body>
+</html>

@@ -55,7 +55,6 @@ header select:focus {
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: 0.8;
 }
 
 header .container {
@@ -102,7 +101,7 @@ main {
 }
 
 .intro {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #fffdfd;
     padding: 40px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px auto;

@@ -1,86 +1,101 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
 }
 
 header {
-    background: linear-gradient(#c850c0, #4158d0);
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+  background: linear-gradient(#c850c0, #4158d0);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+.header img
+{
+    max-width: 60%;
 }
 
 header .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+  margin: 0;
+  font-size: 2.5em;
+  color: #fff;
 }
 
 main {
-    padding: 40px 20px;
+  padding: 40px 20px;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.introduction, .values, .features {
-    margin-bottom: 40px;
+.introduction,
+.values,
+.features {
+  margin-bottom: 40px;
+  color: #fff;
 }
 
-.introduction h2, .values h2, .features h2 {
-    font-size: 2em;
-    border-bottom: 2px solid #ff6f61;
-    display: inline-block;
-    margin-bottom: 20px;
+.introduction h2,
+.values h2,
+.features h2 {
+  font-size: 2em;
+  border-bottom: 2px solid #ff6f61;
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
-.introduction p, .values p, .features ul {
-    font-size: 1.1em;
-    line-height: 1.6;
+.introduction p,
+.values p,
+.features ul {
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
 .introduction img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px 0;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
 }
 
 .features ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .features li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .features li strong {
-    color: #ff6f61;
+  color: #ff6f61;
 }
 
 footer {
-    background-color: #343a40;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: auto;
-  }
-  
-  footer a {
-    margin: 0;
-    color: #e83232;
-  }
-  footer p {
-      margin: 0;
-      color: #f5f5f5;
-  }
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+footer a {
+  margin: 0;
+  color: #e83232;
+}
+footer p {
+  margin: 0;
+  color: #f5f5f5;
+}

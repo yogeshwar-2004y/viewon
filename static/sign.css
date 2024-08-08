@@ -10,8 +10,9 @@ html,body{
   height: 100%;
   width: 100%;
   place-items: center;
-  background: #f2f2f2;
-  /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
+  background: url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
 }
 ::selection{
   background: #4158d0;

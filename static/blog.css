@@ -21,6 +21,12 @@ header {
     text-align: center;
 }
 
+header .logo {
+    width: 10%; /* Adjusted the logo width */
+    display: block;
+    margin: 0 auto 10px;
+}
+
 header h1 {
     margin: 0;
 }
