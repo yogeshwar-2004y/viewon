@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pubs in Coimbatore</title>
+    <link rel="stylesheet" href="static/pubs.css">
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            const ageConfirmed = confirm("you should be 18 years or older?");
+
+            if (!ageConfirmed) {
+                // Redirect to offers page if the user is under 18
+                window.location.href = "/offers";
+            } else {
+                // Show the pubs page if the user is 18 or older
+                document.body.style.display = 'block'; // Ensure the page is visible
+            }
+        });
+    </script>    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pubs in Coimbatore</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/offers">Offers</a>
+                <a href="/singles">Singles</a>
+                <a href="/couples">Couples</a>
+                <a href="/midnight">Midnight</a>
+                <a href="/pubs">Pubs</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="pub-grid">
+            <div class="pub-card">
+                <img src="static/pubs/pub1.jpg" alt="Pub 1">
+                <div class="pub-info">
+                    <h2>Tiki Takko</h2>
+                    <p>cuisines: Bar Food, Continental, Mexican</p>
+                    <p>rating: 4.9</p>
+                    <p>Address: 789 Market St, Coimbatore</p>
+                    <button onclick="location.href='https://coimbatore.parkelanza.com/tiki-tako/'">lосатіои</button>
+                </div>
+            </div>
+            <div class="pub-card">
+                <img src="static/pubs/pub2.jpg" alt="Pub 2">
+                <div class="pub-info">
+                    <h2>Z-Bar</h2>
+                    <p>cuisines: Bar Food, Continental</p>
+                    <p>rating: 4.3</p>
+                    <p>Address: 1011 River Rd, Coimbatore</p>
+                    <button onclick="location.href='https://www.zonebythepark.com/ '">lосатіои</button>
+                </div>
+            </div>
+            <div class="pub-card">
+                <img src="static/pubs/pub3.jpg" alt="Pub 3">
+                <div class="pub-info">
+                    <h2>Deep Purple</h2>
+                    <p>cuisines: Bar Food, Indian</p>
+                    <p>rating: 4.5</p>
+                    <p>Address: 1213 Forest Ave, Coimbatore</p>
+                    <button onclick="location.href='https://www.instagram.com/bardeeppurple/?hl=en '">lосатіои</button>
+                </div>
+            </div>
+            <!-- Add more pub cards as needed -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Vewod. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.pub-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseover', function() {
+                    card.classList.add('hover');
+                });
+                card.addEventListener('mouseout', function() {
+                    card.classList.remove('hover');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

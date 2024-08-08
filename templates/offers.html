@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Zone</title>
+    <link rel="stylesheet" href="static/offers.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Offers Zone</h1>
+        </div>
+    </header>    
+    <main>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <h1 style="color: rgb(95, 71, 39);">Singles<h1>
+                    <img src="static/singles.jpg" alt="Category 1">
+                    <button class="image-button" onclick="location.href='/singles'">More</button>
+                </div>
+                <div class="slide">
+                    <h1 style="color: rgb(95, 71, 39);">Couples<h1>
+                    <img src="static/couples.jpg" alt="Category 2">
+                    <button class="image-button" onclick="location.href='/couples'">More</button>
+                </div>
+                <div class="slide">
+                    <h1 style="color: rgb(95, 71, 39);">Midnight Vibe<h1>
+                    <img src="static/midnight.jpg" alt="Category 3">
+                    <button class="image-button" onclick="location.href='/midnight'">More</button>
+                </div>
+                <div class="slide">
+                    <h1 style="color: rgb(95, 71, 39);">Pub Life</h1>
+                    <img src="static/pubs.jpg" alt="Category 4">
+                    <button class="image-button" onclick="location.href='/pubs'">More</button>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    </main> 
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Vewod. All rights reserved.</p>
+            <a href="/" class="button">Home</a>
+            <a href="/launch" class="button">New Launches</a>
+            <a href="/blog" class="button">Blogs</a>
+            <a href="/offers" class="button">Offers</a>
+            <a href="/about" class="button">About</a>
+        </div>
+    </footer>
+    <script>
+        let currentSlide = 0;
+
+    function showSlide(index) {
+     const slides = document.querySelectorAll('.slide');
+        if (index >= slides.length) {
+        currentSlide = 0;
+        } else if (index < 0) {
+        currentSlide = slides.length - 1;
+        } else {
+        currentSlide = index;
+         }
+      const offset = -currentSlide * 100;
+     document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentSlide);
+});
+
+</script>
+</body>
+</html>

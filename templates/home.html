@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Review Site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to Food Review Site</h1>
+            <nav>
+                <ul>
+                    <li><a href="/offers">home</a></li>
+                    <li><a href="/new-launch">Account</a></li>
+                    <li><a href="https://www.google.com/maps">location</a></li>
+                    <li>
+                        <label for="cars">Country:</label>
+                        <select>
+                            <option>India</option>
+                            <option>Srilanka</option>
+                            <option>Malaysia</option>
+                            <option>Singapore</option>
+                        </select> 
+                    </li>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="intro">
+            <div class="container">
+                <h2>Discover the Best Food & Hotel Reviews in the City</h2>
+                <p>Your ultimate guide to the newest and most exciting culinary experiences.</p>
+                <img src="{{ url_for('static', filename='hoom.jpg') }}" alt="Delicious Food" class="header-img">
+                <div class="cta-buttons">
+                    <a href="/offers" class="button">Check Offers</a>
+                    <a href="/launch" class="button">New Launches</a>
+                    <a href="/blog" class="button">Read Blogs</a>
+                    <a href="/about" class="button">Learn More About Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Vewod Review Site. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
